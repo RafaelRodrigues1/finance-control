@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <script src="../../static/scripts/register.js"></script>
+</head>
+<body>
+    <main class="container registerContainer">
+        <h2 class="cabecalho registerCabecalho">Cadastre-se</h2>
+        <form action="/user/register" class="form registerForm" name="registerForm" method="POST">
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                <input class="bigInput" type="text" name="name" placeholder="Nome completo" required>
+                <input class="bigInput" type="text" name="email" placeholder="E-mail" required>
+                <label for="">
+                    Data de nascimento <input type="date" name="birthDate" required>
+                </label>
+                <div>
+                    <input type="text" name="phone" placeholder="Número do celular" required>
+                    <div class="sucessMessage" id="sucessMessage">*Senhas coincidem*</div>
+                    <div class="errorMessage" id="errorMessage">*Senhas não coincidem*</div>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Senha (8 a 14 caracteres)" maxlength="14" required>
+                    <input type="password" name="confirmPassword" placeholder="Confirme sua senha" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Dados de endereço</legend>
+                <div>
+                    <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Não sei o meu cep</a>
+                </div>
+                <div>
+                    <input type="text" name="cep" placeholder="Insira seu Cep" required maxlength="9">
+                    <input type="text"  name="state" placeholder="Estado" readonly required>
+                </div>
+                <div>
+                    <input type="text"  name="city" placeholder="Cidade" readonly required>
+                    <input type="text"  name="neighborhood" placeholder="Bairro" readonly required>
+                </div>
+                <div>
+                    <input class="bigInput" type="text"  name="street" placeholder="Rua/Avenida" readonly required>
+                    <input class="smallInput" type="text" name="number" placeholder="Número" required>
+                </div>
+            </fieldset>
+            <button id="registerButton" type="submit">Cadastrar</button>
+        </form>
+        <aside>
+            <img class="registerImage" src="../../static/images/moedas-seta.png" alt="" srcset="">
+        </aside>
+    </main>
+</body>
+</html>

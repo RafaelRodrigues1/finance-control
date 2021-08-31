@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+    xmlns:th="http://thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça seu login</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <main class="container loginContainer">
+        <h2 class="cabecalho loginCabecalho">Faça seu login</h2>
+        <form class="loginForm form" action="user/login" method="post">
+            <input type="text" name="email" placeholder="Digite seu email">
+            <input type="password" name="password" placeholder="Digite sua senha">
+            <button type="submit">Entrar</button>
+            <a href="user/regiter">Ainda não é cadastrado?</a>
+        </form>
+        <aside>
+            <img class="loginImage" src="../static/images/dinheiro-cartao-notebook.png" alt="" srcset="">
+        </aside>
+    </main>
+</body>
+</html>
